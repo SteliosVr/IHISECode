@@ -1,0 +1,197 @@
+[TITLE]
+EPANET     Example     Network     1     
+A     simple     example     of     
+wall     reactions     are     included.     
+
+[JUNCTIONS]
+;ID              	Elev        	Demand      	Pattern         
+ 1               	120.0000    	1.000000    	P1              	;
+ 2               	120.0000    	1.000000    	P2              	;
+ 3               	120.0000    	1.000000    	P3              	;
+ 4               	120.0000    	1.000000    	P4              	;
+ 5               	110.0000    	1.000000    	P5              	;
+ 6               	110.0000    	1.000000    	P6              	;
+ 7               	110.0000    	1.000000    	P7              	;
+ 8               	100.0000    	1.000000    	P8              	;
+ 9               	100.0000    	1.000000    	P9              	;
+
+[RESERVOIRS]
+;ID              	Head        	Pattern         
+ 10              	204.5       	                	;
+ 11              	200         	                	;
+
+[TANKS]
+;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve
+
+[PIPES]
+;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ 1               	1               	2               	3200.0000   	450.0000    	100.0000    	0.0000      	Open  	;
+ 2               	2               	3               	1600.0000   	350.0000    	100.0000    	0.0000      	Open  	;
+ 3               	3               	4               	1600.0000   	250.0000    	100.0000    	0.0000      	Open  	;
+ 4               	5               	6               	1600.0000   	250.0000    	100.0000    	0.0000      	Open  	;
+ 5               	6               	7               	1600.0000   	300.0000    	100.0000    	0.0000      	Open  	;
+ 6               	8               	9               	1600.0000   	150.0000    	100.0000    	0.0000      	Open  	;
+ 7               	2               	5               	1600.0000   	250.0000    	100.0000    	0.0000      	Open  	;
+ 8               	3               	6               	1600.0000   	300.0000    	100.0000    	0.0000      	Open  	;
+ 9               	4               	7               	1600.0000   	200.0000    	100.0000    	0.0000      	Open  	;
+ 10              	5               	8               	1600.0000   	200.0000    	100.0000    	0.0000      	Open  	;
+ 11              	6               	9               	1600.0000   	150.0000    	100.0000    	0.0000      	Open  	;
+ 12              	3               	11              	1000.0000   	400.0000    	100.0000    	0.0000      	Open  	;
+ 13              	10              	1               	1000.0000   	450.0000    	100.0000    	0.0000      	Open  	;
+
+[PUMPS]
+;ID              	Node1           	Node2           	Parameters
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+
+[TAGS]
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+
+[STATUS]
+;ID              	Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+;
+ 1               	1.0000      	1.0000      	1.0000      	1.0000      	1.0000      	1.0000      
+ 1               	1.0000      	1.0000      	1.0000      	1.0000      	1.0000      	1.0000      
+;
+ P1              	0.0000      	0.0000      	0.0000      	0.0000      	0.0000      	0.0000      
+;
+ P2              	35.2708     	36.0615     	35.4558     	36.6731     	36.3791     	38.7508     
+;
+ P3              	35.5918     	36.4670     	37.2501     	35.5042     	35.5141     	35.7829     
+;
+ P4              	20.1033     	20.4766     	20.9283     	20.8609     	21.9897     	20.8614     
+;
+ P5              	35.6450     	35.9718     	35.4016     	36.6323     	37.4407     	39.4152     
+;
+ P6              	45.8016     	46.1206     	47.5261     	45.7797     	48.2273     	49.7359     
+;
+ P7              	35.6461     	36.4154     	37.0817     	36.9009     	37.5732     	36.0150     
+;
+ P8              	20.1615     	20.7535     	21.2579     	20.0459     	21.6212     	22.6099     
+;
+ P9              	20.1672     	20.1482     	20.7464     	20.5557     	21.8337     	20.1664     
+
+[CURVES]
+;ID              	X-Value     	Y-Value
+;PUMP: PUMP: 
+ 1               	0.0000      	91.4400     
+ 1               	454.2494    	89.0016     
+ 1               	908.4988    	82.2960     
+ 1               	1362.7482   	70.1040     
+ 1               	1816.9976   	55.1688     
+
+[CONTROLS]
+
+
+[RULES]
+
+
+[ENERGY]
+ Global Efficiency  	75.0000
+ Global Price       	0
+ Demand Charge      	0.0000
+
+[EMITTERS]
+;Junction        	Coefficient
+
+[QUALITY]
+;Node            	InitQual
+ 1               	0.500000
+ 2               	0.500000
+ 3               	0.500000
+ 4               	0.500000
+ 5               	0.500000
+ 6               	0.500000
+ 7               	0.500000
+ 8               	0.500000
+ 9               	0.500000
+ 10              	1.000000
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+
+[REACTIONS]
+ Order Bulk            	1.00
+ Order Tank            	1.00
+ Order Wall            	1
+ Global Bulk           	-0.500000
+ Global Wall           	-1.000000
+ Limiting Potential    	0
+ Roughness Correlation 	0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	3:00 
+ Hydraulic Timestep 	0:05 
+ Quality Timestep   	0:05 
+ Pattern Timestep   	0:05 
+ Pattern Start      	0:00 
+ Report Timestep    	0:05 
+ Report Start       	0:00 
+ Start ClockTime    	0:00:00
+ Statistic          	NONE
+
+[REPORT]
+ Status             	Yes
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	CMH
+ Headloss           	H-W
+ Specific Gravity   	1.000000
+ Viscosity          	1.000000
+ Trials             	40
+ Accuracy           	0.00100000
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0.00000000
+ Unbalanced         	Continue 10
+ Pattern            	1
+ Demand Multiplier  	1.0000
+ Emitter Exponent   	0.5000
+ Quality            	NONE mg/L
+ Diffusivity        	1.000000
+ Tolerance          	0.01000000
+
+[COORDINATES]
+;Node            	X-Coord         	Y-Coord
+ 1               	20.00           	70.00           
+ 2               	30.00           	70.00           
+ 3               	50.00           	70.00           
+ 4               	70.00           	70.00           
+ 5               	30.00           	40.00           
+ 6               	50.00           	40.00           
+ 7               	70.00           	40.00           
+ 8               	30.00           	10.00           
+ 9               	50.00           	10.00           
+ 10              	10.00           	70.00           
+ 11              	50.00           	80.00           
+
+[VERTICES]
+;Link            	X-Coord         	Y-Coord
+
+[LABELS]
+;X-Coord           Y-Coord          Label & Anchor Node
+ 6.95             73.59            "Source     1"                 
+ 48.15            82.13            "Source     2"                 
+
+[BACKDROP]
+ DIMENSIONS     	7.00            	6.00            	73.00           	94.00           
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+[END]
