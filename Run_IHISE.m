@@ -12,6 +12,11 @@ load_paths()
 % Load Network
 % inpname='networks_Ready\Ready_Net1_CMH_3.inp';
 
+
+
+
+
+
 %%%%%%% Only Reservoirs, H-W
 % inpname='networks_Ready\Ready_Net1_CMH_1.inp';
 % inpname='networks_Ready\Ready_Net1_CMH_5.inp';
