@@ -5,10 +5,6 @@ close all;clear;clc;
 load_paths()
 % profile on
 
-
-
-
-
 % Load Network
 % inpname='networks_Ready\Ready_Net1_CMH_3.inp';
 
